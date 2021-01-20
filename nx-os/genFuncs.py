@@ -27,7 +27,7 @@ def login_config(device):
 
     '''
     takes a device and logs into the device
-    retuns the request session for the device
+    returns the request session for the device
     '''
 
     # setup the login template
@@ -72,7 +72,9 @@ def login_config(device):
 
 def save_config(device, session):
 
-    '''sends configuration commands to save running configuration to startup configuration'''
+    '''
+    takes a device and a session object and saves configurations the device
+    '''
     
     # setup save template
     template_env = Environment(loader=FileSystemLoader('./templates/'))
