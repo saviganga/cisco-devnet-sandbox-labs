@@ -1,0 +1,9 @@
+---
+
+ins_api: 
+  version: '0.1'
+  type: cli_conf
+  chunk: '0'
+  sid: session1
+  input: ''
+  output_format: json
