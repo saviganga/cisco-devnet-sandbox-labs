@@ -1,6 +1,6 @@
 # cisco-devnet-sandbox-labs
 
-In this repository, we configure and run commands on the cisco devnet sandboxes using the APIs for the sandbox devices
+In this repository, we configure and run commands on the cisco devnet sandbox devices using the APIs for the sandbox devices
 
 OVERVIEW
 --------
