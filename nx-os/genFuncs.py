@@ -23,7 +23,7 @@ def cli_conf_payload():
 
 
 
-def login_config(device):
+def login_config(device, verify=False):
 
     '''
     takes a device and logs into the device
@@ -52,6 +52,11 @@ def login_config(device):
     url = f'https://{device}:{port}/ins'
     headers = {'content-type': 'application/json'}
     payload['ins_api']['input'] = login_commands[0]
+
+    #########################################################################################
+    if not verify:
+        requests.packages.urllib3.disable_warnings()
+    #########################################################################################
     
     # request
     response = session.post(url, auth=auth, headers=headers, data=json.dumps(payload), verify=False)
