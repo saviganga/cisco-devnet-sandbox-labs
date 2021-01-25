@@ -26,5 +26,4 @@ QUESTIONS
 ---------
 
 1. How do I enable the self signed certificate on the switch to avoid the warning messages when i set verify=False to bypass using certificates
-   ANS
    - by using 'requests.packages.urllib3.disable_warnings()'. checkout the login_device() function in genFuncs.py file
