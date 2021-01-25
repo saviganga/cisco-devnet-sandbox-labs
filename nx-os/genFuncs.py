@@ -53,10 +53,9 @@ def login_config(device, verify=False):
     headers = {'content-type': 'application/json'}
     payload['ins_api']['input'] = login_commands[0]
 
-    #########################################################################################
+    #bypass certificate warnings
     if not verify:
         requests.packages.urllib3.disable_warnings()
-    #########################################################################################
     
     # request
     response = session.post(url, auth=auth, headers=headers, data=json.dumps(payload), verify=False)
@@ -78,7 +77,7 @@ def login_config(device, verify=False):
 def save_config(device, session):
 
     '''
-    takes a device and a session object and saves configurations the device
+    takes a device and a session object and saves configurations for the device
     '''
     
     # setup save template

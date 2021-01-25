@@ -7,8 +7,6 @@ from decouple import config
 from jinja2 import Environment, FileSystemLoader
 
 
-
-
 def config_valn(device, session):
 
     '''
